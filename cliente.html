@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cliente Web</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Cliente Web</div>
+    </header>
+
+    <div class="main-container">
+        <div class="request-container">
+            <form class="form_encryption">
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="metodo">Método</label>
+                        <select name="metodo" id="metodo">
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
+                            <option value="PUT">PUT</option>
+                            <option value="DELETE">DELETE</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ambiente">Ambiente</label>
+                        <select name="ambiente" id="ambiente">
+                            <option value="https://dev-api.bancoazteca.com.mx:8080">DESARROLLO</option>
+                            <option value="https://qa-api.bancoazteca.com.mx:8080">QA ONPREMISE [PERF]</option>
+                            <option value="https://qa-api.bancoazteca.com.mx:8081">QA ONPREMISE [UAT]</option>
+                            <option value="https://qa.apibaz.com">QA AWS [SANDBOX]</option>
+                            <option value="https://qa-interno.apibaz.com:8081">QA AWS [UAT]</option>
+                            <option value="https://qa-interno.apibaz.com:8080">QA AWS [PERF]</option>
+                            <option value="http://localhost:3000">Server Local NODE</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="basePath">BasePath</label>
+                        <input type="text" id="basePath" name="basePath" placeholder="/azteca/targetas/v1/consultas">
+                    </div>
+                    <div class="form-group">
+                        <label for="basePath">&nbsp</label>
+                        <button type="button" onclick="myFunction()">Enviar</button>
+                    </div>
+                </div>
+
+                <div class="segunda-fila">
+                    <div class="form-section-two">
+                        <div class="form-group">
+                            <label for="Content-Type">Content-Type</label>
+                            <select name="Content-Type" id="Content-Type">
+                                <option value="application/json">JSON</option>
+                                <option value="application/x-www-form-urlencoded">x-www-form-urlencoded</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="token">Bearer Token</label>
+                            <input type="text" id="token" name="token">
+                        </div>
+                        <div class="form-group">
+                            <label for="headers">Headers</label>
+                            <textarea name="headers" id="headers" placeholder="x-id-plataforma:1"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section-3">
+                        <div class="form-group">
+                            <label for="body">Body</label>
+                            <textarea name="body" id="body" rows="12"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="response-container">
+                <div class="response-box">
+                    <div class="response-header">Simbolo del sistema - Respuesta</div>
+                    <textarea class="response-text" name="response" id="response" rows="10"
+                        readonly>WEB:\Print\Respuesta\></textarea>
+                </div>
+                <div class="response-box">
+                    <div class="response-header">Simbolo del sistema - Curl</div>
+                    <textarea class="response-text" name="curl" id="curl" rows="10"
+                        readonly>WEB:\Print\Curl\></textarea>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

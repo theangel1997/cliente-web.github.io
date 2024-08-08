@@ -1,0 +1,315 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+    width: 80%;
+    gap: 10px;
+    align-content: center;
+    margin: auto;
+}
+
+.request-container {
+    flex: 0 0 100%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.form_encryption {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.segunda-fila {
+    width: 100%;
+    display: flex;
+}
+
+.form-section-two {
+    padding-top: 10px;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+}
+
+.form-section-3 {
+    padding-top: 10px;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+    padding-left: 10px;
+}
+
+.form-section-3 textarea {
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+#metodo {
+    min-width: 140px;
+}
+
+#ambiente {
+    min-width: 197px;
+}
+
+#basePath {
+    min-width: 750px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 5px 10px;
+    height: 38px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.response-container {
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.response-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.response-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.response-text {
+    width: 100%;
+    border: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-section,
+    .segunda-fila {
+        flex-direction: column;
+        /* Cambia a columna en pantallas más pequeñas */
+    }
+
+    .form-section-two,
+    .form-section-3 {
+        width: 100%;
+        /* Ajusta al 100% del ancho disponible */
+        padding-left: 0;
+    }
+
+    .response-container {
+        flex-direction: column;
+        /* Cambia a columna en pantallas más pequeñas */
+    }
+
+    .response-box {
+        width: 100%;
+        /* Ajusta al 100% del ancho disponible */
+    }
+
+    #basePath {
+        min-width: 100%;
+        /* Ajusta al 100% del ancho disponible en pantallas pequeñas */
+    }
+
+    select,
+    input[type="text"],
+    textarea,
+    button {
+        width: 100%;
+        /* Asegura que todos los elementos se ajusten al ancho disponible */
+        box-sizing: border-box;
+        /* Incluye padding y border en el ancho total */
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #metodo {
+        width: 100%;
+    }
+
+    #ambiente {
+        width: 100%;
+    }
+
+    #basePath {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .response-box {
+        font-size: 14px;
+        /* Ajusta el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    #metodo {
+        width: 100%;
+    }
+
+    #ambiente {
+        width: 100%;
+    }
+
+    #basePath {
+        width: 100%;
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-section {
+        flex-direction: column;
+        /* Cambia a columna en pantallas más pequeñas */
+        gap: 10px;
+        /* Agrega espacio entre los elementos */
+    }
+
+    .form-group {
+        width: 100%;
+        /* Asegura que cada grupo ocupe el 100% del ancho disponible */
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+        /* Ajusta el margen inferior del label */
+    }
+
+    select,
+    input[type="text"],
+    button {
+        width: 100%;
+        /* Asegura que todos los elementos se ajusten al ancho disponible */
+        box-sizing: border-box;
+        /* Incluye padding y border en el ancho total */
+    }
+
+    /* Ajusta el ancho del input específico si es necesario */
+    #basePath {
+        min-width: auto;
+        /* Ajusta el ancho mínimo para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .response-box {
+        font-size: 14px;
+        /* Ajusta el tamaño de la fuente en pantallas muy pequeñas */
+    }
+}
